@@ -1,6 +1,9 @@
 <template>
     <div class="bucket-item">
-        <ul>{{item}}}</ul>
+        {{item.task}}
+        {{item.message}}
+        {{item.status}}
+        {{item.date}}
     </div>
 </template>
 

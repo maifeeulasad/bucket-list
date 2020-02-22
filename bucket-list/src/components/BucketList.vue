@@ -5,7 +5,9 @@
     </h1>
 
     <ul>
-      {{ data }}
+        <li v-for="item in data" :key="item.task">
+        <BucketItem :item="item"/>
+      </li>
     </ul>
 
     <h6>
@@ -14,9 +16,14 @@
   </div>
 </template>
 
+
+
 <script>
+
+  import BucketItem from './BucketItem.vue'
   export default {
     name: 'BucketList',
+    components: {BucketItem},
     props: {
       title: String,
       footer : String,
